@@ -1,5 +1,5 @@
-# Aplicamos funcion
 
+# Declaramos las funciones a utilizar
 def sumar(a, b):
     return a + b
 
@@ -11,7 +11,7 @@ def multiplicar(a, b):
 
 def dividir(a, b):
     if b == 0:
-        return "Error: division entre 0"
+        return "Error: división entre 0"
     return a / b
 
 def mcd(a, b):
@@ -20,50 +20,48 @@ def mcd(a, b):
     return a
 
 def pedir_numeros():
-    n1 = float(input("ingresa primer numero:"))
-    n2 = float(input("ingresa segundo numero:"))
+    n1 = float(input("Ingresa primer número: "))
+    n2 = float(input("Ingresa segundo número: "))
     return n1, n2
 
+# Funcion para mostrar el menu
 def menu():
     print("-------------------------------------------------")
     print("=== Calculadora extendida ===")
     print("1. Suma")
     print("2. Resta")
-    print("3. Multiplicacion")
-    print("4. Division")
+    print("3. Multiplicación")
+    print("4. División")
     print("5. MCD")
+    print("6. Salir")
     print("-------------------------------------------------")
 
-if main():
+# Funcion para mostrar el menu siempre que el usuario no salga del programa
+def main():
     while True:
         menu()
-        opcion = input("Ingresar el numero de operacion:")
+        opcion = input("Ingresar el número de operación: ")
 
         if opcion == "6":
-            print("Haz salido del programa, hasta luego")
+            print("Has salido del programa. ¡Hasta luego!")
             break
 
         if opcion in ["1", "2", "3", "4", "5"]:
-            n1. n2 = pedir_numeros()
+            n1, n2 = pedir_numeros()
 
-        if opcion == "1":
-            print("La suma es:", sumar(n1, n2))
-
-        elif opcion == "2":
-            print("La resta es:", restar(n1, n2))
-
-        elif opcion == "3":
-            print("La multiplicacion es:", multiplicar(n1, n2))
-
-        elif opcion == "4":
-            print("La division es:", dividir(n1, n2))
-
-        elif opcion == "5":
-            print("El MCD es:", mcd(int(n1), int(n2)))
-
+            match opcion:
+                case "1":
+                    print("La suma es:", sumar(n1, n2))
+                case "2":
+                    print("La resta es:", restar(n1, n2))
+                case "3":
+                    print("La multiplicación es:", multiplicar(n1, n2))
+                case "4":
+                    print("La división es:", dividir(n1, n2))
+                case "5":
+                    print("El MCD es:", mcd(int(n1), int(n2)))
         else:
-            print("Opcio invalida, intenta nuevamente")
+            print("Opción inválida, intenta nuevamente.")
 
 if __name__ == "__main__":
     main()
-
