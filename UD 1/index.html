@@ -3,45 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenido a la unidad 1 de Programación</title>
+  <title>Unidad 1 - Fundamentos de la Programación</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #fffaf0;
-      margin: 2em;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #c4d9ff, #e9d3ff);
       color: #333;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
+    .container {
+      background: white;
+      width: 80%;
+      max-width: 900px;
+      border-radius: 15px;
+      padding: 40px 60px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
     h1 {
-      color: #0078D4;
+      font-size: 1.8em;
+      color: #4b3cc4;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.3em;
+      color: #4b3cc4;
+      margin-top: 30px;
+    }
+
+    p {
+      color: #555;
+      font-size: 1em;
+      line-height: 1.5;
+      margin-bottom: 20px;
       text-align: center;
     }
-    a {
-      color: #0078D4;
-      text-decoration: none;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
-    a:hover {
+
+    ul li {
+      background: #f5f3ff;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+
+    ul li:hover {
+      background: #e4dbff;
+      transform: translateX(5px);
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #4b3cc4;
+      font-weight: 500;
+    }
+
+    ul li a:hover {
       text-decoration: underline;
     }
-    ul {
-      line-height: 1.8em;
+
+    .back {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back a {
+      display: inline-block;
+      background: #4b3cc4;
+      color: white;
+      text-decoration: none;
+      padding: 10px 25px;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+
+    .back a:hover {
+      background: #6c58ff;
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>Unidad 1 - Fundamentos de la Programación</h1>
-  <p>En esta unidad encontrarás algunos de las actividades, ejercicios y proyecos realizados en el tema 1</p>
+  <div class="container">
+    <h1>Unidad 1 - Fundamentos de la Programación</h1>
+    <p>En esta unidad encontrarás algunas de las actividades, ejercicios y proyectos realizados en el tema 1.</p>
 
-  <h2>Ídice</h2>
-  <ul>
-    <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Actividades">Actividades</a></li>
-    <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Diagramas">Diagramas</a></li>
-    <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20PSeInt">Ejercicios PSeInt</a></li>
-    <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20Python">Ejercicios Python</a></li>
-    <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20de%20ampliacion">Ejercicios Amapliacion</a></li> 
-    <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Proyecto%20UD1">Proyecto</a></li>
-    <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/Portfolio%20PROGR%20-%20Tema%201.md">Portfolio</a></li>
-  </ul>
+    <h2>Índice</h2>
+    <ul>
+      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Actividades" target="_blank">Actividades</a></li>
+      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Diagramas" target="_blank">Diagramas</a></li>
+      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20PSeInt" target="_blank">Ejercicios PSeInt</a></li>
+      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20Python" target="_blank">Ejercicios Python</a></li>
+      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20de%20ampliacion" target="_blank">Ejercicios Ampliación</a></li>
+      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Proyecto%20UD1" target="_blank">Proyecto</a></li>
+      <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/Portfolio%20PROGR%20-%20Tema%201.md" target="_blank">Portfolio</a></li>
+    </ul>
 
-  <p><a href="../index.html">Volver al inicio</a></p>
+    <div class="back">
+      <a href="../index.html">Volver al inicio</a>
+    </div>
+  </div>
 </body>
 </html>
