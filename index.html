@@ -4,42 +4,118 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Programación - Jhonal Roca</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #c4d9ff, #e9d3ff);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  <!-- Contenedor principal -->
-  <div class="flex justify-between items-start p-8 bg-white shadow-md rounded-lg m-6">
-    <!-- Contenido principal -->
-    <div class="w-2/3">
-      <h1 class="text-3xl font-semibold mb-4">Bienvenido al módulo de Programación</h1>
-      <p class="text-lg text-gray-600 mb-6">
-        Aquí veremos un poco de lo aprendido durante el curso y algunos de los ejercicios y proyectos 
-        que realizamos en el aula de clases.
+    .container {
+      background: white;
+      width: 80%;
+      max-width: 900px;
+      border-radius: 15px;
+      padding: 40px 60px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .content {
+      width: 65%;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #4b3cc4;
+    }
+
+    p {
+      color: #555;
+      font-size: 1em;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      text-align: center;
+      padding: 10px 0;
+      width: 90px;
+      border-radius: 10px;
+      background: #4b3cc4;
+      color: white;
+      transition: all 0.2s ease;
+    }
+
+    .buttons a:hover {
+      background: #6c58ff;
+      transform: scale(1.05);
+    }
+
+    .profile {
+      text-align: right;
+    }
+
+    .profile .avatar {
+      background: #e2d9ff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-left: auto;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      color: #4b3cc4;
+    }
+
+    .profile p {
+      margin: 2px 0;
+      font-size: 0.9em;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Bienvenido al módulo de Programación</h1>
+      <p>
+        Aquí veremos un poco de lo aprendido durante el curso y algunos de los ejercicios 
+        y proyectos que realizamos en el aula de clases.
       </p>
-      
-      <!-- Botones de Unidades -->
-      <div class="flex flex-col gap-3">
-        <a href="https://github.com/jrocher526/PROGR/tree/main/UD%201" target="_blank" class="w-24 text-center px-4 py-2 bg-white border rounded-md shadow hover:bg-blue-100 transition">UD 1</a>
-        <a href="https://github.com/TU_USUARIO/UD2" target="_blank" class="w-24 text-center px-4 py-2 bg-white border rounded-md shadow hover:bg-blue-100 transition">UD 2</a>
-        <a href="https://github.com/TU_USUARIO/UD3" target="_blank" class="w-24 text-center px-4 py-2 bg-white border rounded-md shadow hover:bg-blue-100 transition">UD 3</a>
-        <a href="https://github.com/TU_USUARIO/UD4" target="_blank" class="w-24 text-center px-4 py-2 bg-white border rounded-md shadow hover:bg-blue-100 transition">UD 4</a>
-        <a href="https://github.com/TU_USUARIO/UD5" target="_blank" class="w-24 text-center px-4 py-2 bg-white border rounded-md shadow hover:bg-blue-100 transition">UD 5</a>
+      <div class="buttons">
+        <a href="https://github.com/TU_USUARIO/UD1" target="_blank">UD 1</a>
+        <a href="https://github.com/TU_USUARIO/UD2" target="_blank">UD 2</a>
+        <a href="https://github.com/TU_USUARIO/UD3" target="_blank">UD 3</a>
+        <a href="https://github.com/TU_USUARIO/UD4" target="_blank">UD 4</a>
+        <a href="https://github.com/TU_USUARIO/UD5" target="_blank">UD 5</a>
       </div>
     </div>
 
-    <!-- Perfil -->
-    <div class="flex flex-col items-end">
-      <div class="bg-purple-100 rounded-full p-3 mb-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10 2a5 5 0 100 10A5 5 0 0010 2zM2 18a8 8 0 1116 0H2z" clip-rule="evenodd" />
-        </svg>
-      </div>
-      <p class="font-medium">Jhonal Roca</p>
-      <p class="text-sm text-gray-600">1º - DAW</p>
-      <p class="text-sm text-gray-600">25/26</p>
+    <div class="profile">
+      <div class="avatar">👤</div>
+      <p><strong>Jhonal Roca</strong></p>
+      <p>1º - DAW</p>
+      <p>Curso 25/26</p>
     </div>
   </div>
-
 </body>
 </html>
