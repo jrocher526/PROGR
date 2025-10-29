@@ -21,16 +21,22 @@
       background: white;
       width: 80%;
       max-width: 900px;
-      border-radius: 15px;
+      border-radius: 20px;
       padding: 40px 60px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .content {
+      width: 65%;
     }
 
     h1 {
       font-size: 1.8em;
-      color: #4b3cc4;
-      text-align: center;
       margin-bottom: 10px;
+      color: #4b3cc4;
     }
 
     h2 {
@@ -44,7 +50,6 @@
       font-size: 1em;
       line-height: 1.5;
       margin-bottom: 20px;
-      text-align: center;
     }
 
     ul {
@@ -76,9 +81,33 @@
       text-decoration: underline;
     }
 
+    .profile {
+      text-align: right;
+    }
+
+    .avatar {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #4b3cc4;
+      margin-left: auto;
+      margin-bottom: 10px;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile p {
+      margin: 2px 0;
+      font-size: 0.9em;
+    }
+
     .back {
-      text-align: center;
-      margin-top: 30px;
+      margin-top: 25px;
     }
 
     .back a {
@@ -99,22 +128,34 @@
 </head>
 <body>
   <div class="container">
-    <h1>Unidad 1 - Fundamentos de la Programación</h1>
-    <p>En esta unidad encontrarás algunas de las actividades, ejercicios y proyectos realizados en el tema 1.</p>
+    <div class="content">
+      <h1>Unidad 1 - Fundamentos de la Programación</h1>
+      <p>En esta unidad encontrarás algunas de las actividades, ejercicios y proyectos realizados en el tema 1.</p>
 
-    <h2>Índice</h2>
-    <ul>
-      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Actividades" target="_blank">Actividades</a></li>
-      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Diagramas" target="_blank">Diagramas</a></li>
-      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20PSeInt" target="_blank">Ejercicios PSeInt</a></li>
-      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20Python" target="_blank">Ejercicios Python</a></li>
-      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20de%20ampliacion" target="_blank">Ejercicios Ampliación</a></li>
-      <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Proyecto%20UD1" target="_blank">Proyecto</a></li>
-      <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/Portfolio%20PROGR%20-%20Tema%201.md" target="_blank">Portfolio</a></li>
-    </ul>
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Actividades" target="_blank">Actividades</a></li>
+        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Diagramas" target="_blank">Diagramas</a></li>
+        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20PSeInt" target="_blank">Ejercicios PSeInt</a></li>
+        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20Python" target="_blank">Ejercicios Python</a></li>
+        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20de%20ampliacion" target="_blank">Ejercicios Ampliación</a></li>
+        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Proyecto%20UD1" target="_blank">Proyecto</a></li>
+        <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/Portfolio%20PROGR%20-%20Tema%201.md" target="_blank">Portfolio</a></li>
+      </ul>
 
-    <div class="back">
-      <a href="../index.html">Volver al inicio</a>
+      <div class="back">
+        <a href="../index.html">Volver al inicio</a>
+      </div>
+    </div>
+
+    <div class="profile">
+      <div class="avatar">
+        <!-- Sustituye “tu-foto.jpg” por el nombre real de tu imagen -->
+        <img src="tu-foto.jpg" alt="Foto de Jhonal Roca">
+      </div>
+      <p><strong>Jhonal Roca</strong></p>
+      <p>1º - DAW</p>
+      <p>Curso 25/26</p>
     </div>
   </div>
 </body>
