@@ -6,7 +6,8 @@ def maximo(t):
         if num > max_valor:
             max_valor = num
     return max_valor
-
-# Ejemplo de uso
+    
+# Utilizamos la funcion
 tabla = [5, 12, 3, 20, 8]
 print("El valor máximo es:", maximo(tabla))
+
