@@ -1,15 +1,23 @@
-import ejercicio015BusquedaLineal
-import ejercicio016BusquedaBinaria
+import ejercicio015
+import ejercicio016
 
-numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+numeros = [30, 66, 89, 612, 37, 55, 82, 91, 10]
+eleccion = 91
 
 print("Busqueda lineal:")
-lineal = ejercicio015BusquedaLineal.buscar_numero(premio, numeros)
-print(lineal)
+resultado = ejercicio015.buscar_numero(eleccion, numeros)
 
-print("\nBusqueda Binaria:")
-binaria = ejercicio016BusquedaBinaria.busquedaBinaria(premio, eleccion)
-print(binaria)
+if resultado != -1:
+    print("El numero",eleccion,"se encuentra en la posicion",(resultado))
+else:
+    print("Ese numero no se encuentra.")
 
+print("------------------------------------------")
 
+print("Busqueda Binaria:")
+resultado = ejercicio016.busquedaBinaria(numeros, eleccion)
 
+if resultado != -1:
+    print("El numero",eleccion,"se encuentra en la posicion",(resultado))
+else:
+    print("Ese numero no se encuentra.")
