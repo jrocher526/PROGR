@@ -7,8 +7,13 @@ copia1 = original.copy()
 copia2 = original[:]
 
 copia3 = []
-for i in original:
-    copia3.append(i)
+# Imprime el elemento
+for x in original:
+    copia3.append(x)
+    
+# Imprime el indice    
+# for i in range(len(original)):
+#     copia3.append(original[i])
 
 copia4 = original
 
@@ -34,4 +39,5 @@ print("copia 4:", comparacion(original, copia4))
 
 
 #TODO: Diferencia entre eliminarlo con pop y con remove?
+
        
