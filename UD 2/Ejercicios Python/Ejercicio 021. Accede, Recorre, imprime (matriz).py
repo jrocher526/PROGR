@@ -32,10 +32,10 @@ m2 = [
 ]
 
 for f in range(3):
-    for c in range(3):
-        if m[f][c] % 2 == 0:
-            m2[f][c] = (m[f][c])
-            
+    for e in range(3):
+        if m[f][e] % 2 == 0:
+            m2[f][e] = (m[f][e])
+            m[f][e] = 0
             
 print("Lista m:")
 for fila in m:
@@ -45,3 +45,4 @@ print("\nLista m2:")
 for fila in m2:
     print(fila)
     
+
