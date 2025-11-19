@@ -11,7 +11,7 @@ suma = 0
 i = 0
 
 while i < len(p):
-    suma += p[i][1]
+    suma = suma + p[i][1]
     i += 1
 
 print("Suma:", suma)
@@ -22,6 +22,6 @@ print("\nUsando For:")
 sumaf = 0
 
 for fila in p:
-    sumaf += fila[1]
+    sumaf = sumaf + fila[1]
 
-print("Sumas:", sumaf)
+print("Suma:", sumaf)
