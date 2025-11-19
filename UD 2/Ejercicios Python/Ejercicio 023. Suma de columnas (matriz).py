@@ -6,22 +6,26 @@ p = [
 
 # Suma con while 
 print("Usando While:")
-
 suma = 0
 i = 0
-
 while i < len(p):
     suma = suma + p[i][1]
     i += 1
 
 print("Suma:", suma)
 
-# Suma con for 
-print("\nUsando For:")
-
-sumaf = 0
-
+# For-each
+print("\nUsando For-each:")
+suma = 0
 for fila in p:
-    sumaf = sumaf + fila[1]
+    suma = suma + fila[1]
 
-print("Suma:", sumaf)
+print("Suma:", suma)
+
+# For
+print("\nUsando for:")
+suma = 0
+for i in range(len(p)):
+    suma = suma + p[i][1]
+
+print("Suma:", suma)
