@@ -296,6 +296,7 @@ Tiene un bucle externo (i) que va del 1 al 10\.
 Dentro, hay un bucle interno (j) que también va del 1 al 10\.  
 En cada iteración del bucle interno, imprime el producto de i por j.  
 En resumen, muestra la tabla de multiplicar del 1 al 10, número por número.  
+
 ---
 
 5. ## FUNCIONES
