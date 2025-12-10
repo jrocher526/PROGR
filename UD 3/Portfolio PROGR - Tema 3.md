@@ -348,11 +348,11 @@ int max(int a, int b) {
 
 Funcion con el mismo nombre pero distintos numeros de parametros o tambien se puede distintos tipos de parametros.
 
- int max(int a, int b, int c) {  
- …  
- }  
+int max(int a, int b, int c) {   
+…  
+ } 
+ 
 ---
-
 # Conclusión
 
 Este portafolio presenta de forma completa todos los contenidos fundamentales del PDF sobre la Unidad Didáctica 5: fundamentos de Java, sintaxis básica, condicionales, bucles y funciones. Estos conocimientos son esenciales antes de comenzar con la Programación Orientada a Objetos, ya que permiten comprender cómo funciona el lenguaje, cómo se organiza la lógica de un programa y cómo reutilizar código de manera eficiente.
