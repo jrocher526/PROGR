@@ -14,7 +14,7 @@ Este portafolio explica todos los contenidos del PDF de manera clara, sencilla y
 
 1. ## Introducción a Java
 
-   ## ---
+---
 
 ### Conceptos previos
 
@@ -55,7 +55,7 @@ En ejecución pueden aparecer errores como divisiones por cero o posiciones inv�
 
 2. ## FUNDAMENTOS DEL LENGUAJE JAVA
 
-## ---
+---
 
  
 
@@ -201,7 +201,7 @@ Explícita (casting):
 
 3. ## CONDICIONALES
 
-   ## ---
+---
 
  
 
@@ -256,7 +256,7 @@ Si dia no es 1 ni 2 → imprime "Día no válido"
 
 4. ## BUCLES
 
-   ## ---
+---
 
  
 
@@ -300,7 +300,7 @@ En resumen, muestra la tabla de multiplicar del 1 al 10, número por número.
 
 5. ## FUNCIONES
 
-   ## ---
+---
 
 ### Qué es una función
 
