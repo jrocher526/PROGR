@@ -2,50 +2,23 @@ package ejercicio7;
 
 public class Vehiculo {
 
-	// Atributos 
-	private String marca;
-	private String modelo;
-	private int anio;
-	
-	// Constructor
-	Vehiculo(String marca, String modelo, int anio) {
-		this.marca = marca;
-		this.modelo = modelo;
-		this.anio = anio;
-	}
-	
-	// Metodo para mostrar detalles del Vehiculo
-	void mostrarDetalles() {
-		System.out.println("Marca: " + marca +  ", Modelo: " + modelo + ", Año: " + anio);
-	}
-	
-	// Metodo para decir que el vehiculo esta en movimiento 
-	void mover() {
-		System.out.println("El vehiculo esta en movimiento");
-	}
+    protected String marca;
+    protected String modelo;
+    protected int anio;
 
-	// Getters y Setters
-	public String getMarca() {
-		return marca;
-	}
+    public Vehiculo(String marca, String modelo, int anio) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anio = anio;
+    }
 
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
+    public void mostrarDetalles() {
+        System.out.println("Marca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Año: " + anio);
+    }
 
-	public String getModelo() {
-		return modelo;
-	}
-
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
-	}
-
-	public int getAnio() {
-		return anio;
-	}
-
-	public void setAnio(int anio) {
-		this.anio = anio;
-	}
+    public void mover() {
+        System.out.println("El vehículo está en movimiento");
+    }
 }
