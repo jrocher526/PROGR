@@ -1,160 +1,168 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unidad 1 - Fundamentos de la Programación</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #c4d9ff, #e9d3ff);
-      color: #333;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unidad 1 - Fundamentos de la Programación</title>
 
-    .container {
-      background: white;
-      width: 80%;
-      max-width: 900px;
-      border-radius: 20px;
-      padding: 40px 60px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
+<style>
 
-    .content {
-      width: 65%;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    h1 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      color: #4b3cc4;
-    }
+  background: linear-gradient(180deg, 
+    #FFD93B 0%,
+    #1A3FAF 50%,  
+    #D72638 100%
+  );
 
-    h2 {
-      font-size: 1.3em;
-      color: #4b3cc4;
-      margin-top: 30px;
-    }
+  background-attachment: fixed;
+}
 
-    p {
-      color: #555;
-      font-size: 1em;
-      line-height: 1.5;
-      margin-bottom: 20px;
-    }
+.container {
+  background: rgba(255,255,255,0.9);
+  width: 80%;
+  max-width: 900px;
+  border-radius: 20px;
+  padding: 40px 60px;
+  box-shadow: 0 10px 30px rgb(0,0,0);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+.content{
+  width:65%;
+}
 
-    ul li {
-      background: #f5f3ff;
-      margin: 8px 0;
-      padding: 10px 15px;
-      border-radius: 10px;
-      transition: all 0.2s ease;
-    }
+h1{
+  margin-bottom:15px;
+}
 
-    ul li:hover {
-      background: #e4dbff;
-      transform: translateX(5px);
-    }
+p{
+  color:#555;
+}
 
-    ul li a {
-      text-decoration: none;
-      color: #4b3cc4;
-      font-weight: 500;
-    }
+ul{
+  list-style:none;
+  padding:0;
+}
 
-    ul li a:hover {
-      text-decoration: underline;
-    }
+ul li{
+  text-decoration: none;
+  background: linear-gradient(180deg, 
+    #FFD93B 0%,
+    #1A3FAF 50%,  
+    #D72638 100%
+  );
+  background-attachment: fixed;
+  color: white;
+  display: block;
+  margin:8px 0;
+  padding:10px 15px;
+  border-radius:10px;
+  transition:0.2s;
+}
 
-    .profile {
-      text-align: right;
-    }
+ul li:hover{
+  transform:translateX(8px);
+}
 
-    .avatar {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #4b3cc4;
-      margin-left: auto;
-      margin-bottom: 10px;
-    }
+ul li a{
+  text-decoration:none;
+  color:rgb(255, 255, 255);
+  font-weight:500;
+}
 
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+/* BOTÓN VOLVER */
 
-    .profile p {
-      margin: 2px 0;
-      font-size: 0.9em;
-    }
+.back{
+  margin-top:25px;
+}
 
-    .back {
-      margin-top: 25px;
-    }
+.back a{
+  text-decoration:none;
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:10px;
+  background: linear-gradient(180deg, 
+        #FFD93B 0%,
+        #1A3FAF 50%,  
+        #D72638 100%
+      );
+  color:white;
+  transition:0.2s;
+}
 
-    .back a {
-      display: inline-block;
-      background: #4b3cc4;
-      color: white;
-      text-decoration: none;
-      padding: 10px 25px;
-      border-radius: 10px;
-      transition: all 0.2s ease;
-    }
+.back a:hover{
+  transform:scale(1.05);
+}
 
-    .back a:hover {
-      background: #6c58ff;
-      transform: scale(1.05);
-    }
-  </style>
+/* BANDERA */
+
+.flags{
+  position:fixed;
+  top:20px;
+  left:20px;
+}
+
+.flags .flag{
+  width:70px;
+}
+
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="content">
-      <h1>Unidad 1 - Fundamentos de la Programación</h1>
-      <p>En esta unidad encontrarás algunas de las actividades, ejercicios y proyectos realizados en el tema 1.</p>
 
-      <h2>Índice</h2>
-      <ul>
-        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Actividades" target="_blank">Actividades</a></li>
-        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Diagramas" target="_blank">Diagramas</a></li>
-        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20PSeInt" target="_blank">Ejercicios PSeInt</a></li>
-        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20Python" target="_blank">Ejercicios Python</a></li>
-        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20de%20ampliacion" target="_blank">Ejercicios Ampliación</a></li>
-        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Proyecto%20UD1" target="_blank">Proyecto</a></li>
-        <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/Portfolio%20PROGR%20-%20Tema%201.md" target="_blank">Portfolio</a></li>
-        <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/UD%201%20-%20Introducci%C3%B3n%20a%20la%20programaci%C3%B3n.pdf" target="_blank">Diapositivas del temario</a></li>
+<div class="flags">
+<img src="PROGR/banderas.jpg" class="flag">
+</div>
 
-      </ul>
+<div class="container">
 
-      <div class="back">
-        <a href="../index.html">Volver al inicio</a>
-      </div>
-    </div>
+<div class="content">
 
-    <div class="profile">
-      <p><strong>Jhonal Roca</strong></p>
-      <p>1º - DAW</p>
-      <p>Curso 25/26</p>
-    </div>
-  </div>
+<h1>Unidad 1 - Fundamentos de la Programación</h1>
+
+<p>
+En esta unidad encontrarás algunas de las actividades, ejercicios y proyectos realizados en el tema 1.
+</p>
+
+<h2>Índice</h2>
+
+<ul>
+<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Actividades" target="_blank">Actividades</a></li>
+<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Diagramas" target="_blank">Diagramas</a></li>
+<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20PSeInt" target="_blank">Ejercicios PSeInt</a></li>
+<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20Python" target="_blank">Ejercicios Python</a></li>
+<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20de%20ampliacion" target="_blank">Ejercicios Ampliación</a></li>
+<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Proyecto%20UD1" target="_blank">Proyecto</a></li>
+<li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/Portfolio%20PROGR%20-%20Tema%201.md" target="_blank">Portfolio</a></li>
+<li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/UD%201%20-%20Introducci%C3%B3n%20a%20la%20programaci%C3%B3n.pdf" target="_blank">Diapositivas del temario</a></li>
+</ul>
+
+<div class="back">
+<a href="../index.html">Volver al inicio</a>
+</div>
+
+</div>
+
+<div class="profile">
+
+<p><strong>Jhonal Roca</strong></p>
+<p>1º - DAW</p>
+<p>Curso 25/26</p>
+
+</div>
+
+</div>
+
 </body>
 </html>
