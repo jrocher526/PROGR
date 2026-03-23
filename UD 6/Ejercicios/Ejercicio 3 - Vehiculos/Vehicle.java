@@ -22,11 +22,12 @@ public abstract class Vehicle implements Maintenance {
     
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (!(obj instanceof Vehicle)) return false;
-
-        Vehicle v = (Vehicle) obj;
-        return licensePlate.equals(v.licensePlate);
+        if (this == obj) return true;	// == Compara referencias
+        else if (this.licensePlate.equals(((Vehicle)obj).licensePlate)) // .equals compara contenido
+        	return true;
+        else {
+        	return false;
+        }
     }
 
     @Override
