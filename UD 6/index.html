@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unidad 6 - Interfaces</title>
+  <style>
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(180deg, 
+    #FFD93B 0%,
+    #1A3FAF 50%,  
+    #D72638 100%
+  );
+
+  background-attachment: fixed;
+}
+
+.container {
+  background: rgba(255,255,255,0.9);
+  width: 80%;
+  max-width: 900px;
+  border-radius: 20px;
+  padding: 40px 60px;
+  box-shadow: 0 10px 30px rgb(0,0,0);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content{
+  width:65%;
+}
+
+h1{
+  margin-bottom:15px;
+}
+
+p{
+  color:#555;
+}
+
+ul{
+  list-style:none;
+  padding:0;
+}
+
+ul li{
+  text-decoration: none;
+  background: linear-gradient(180deg, 
+    #FFD93B 0%,
+    #1A3FAF 50%,  
+    #D72638 100%
+  );
+  background-attachment: fixed;
+  color: white;
+  display: block;
+  margin:8px 0;
+  padding:10px 15px;
+  border-radius:10px;
+  transition:0.2s;
+}
+
+ul li:hover{
+  transform:translateX(8px);
+}
+
+ul li a{
+  text-decoration:none;
+  color:rgb(255, 255, 255);
+  font-weight:500;
+}
+
+/* BOTÓN VOLVER */
+
+.back{
+  margin-top:25px;
+}
+
+.back a{
+  text-decoration:none;
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:10px;
+  background: linear-gradient(180deg, 
+        #FFD93B 0%,
+        #1A3FAF 50%,  
+        #D72638 100%
+      );
+  color:white;
+  transition:0.2s;
+}
+
+.back a:hover{
+  transform:scale(1.05);
+}
+
+/* BANDERA */
+
+.flags{
+  position:fixed;
+  top:20px;
+  left:20px;
+}
+
+.flags .flag{
+  width:70px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="flags">
+  <img src="../banderas.jpg" class="flag">
+</div>
+  <div class="container">
+    <div class="content">
+      <h1>Unidad 5 - Principios de la POO</h1>
+      <p>En esta unidad encontrarás algunas de las actividades, ejercicios y proyectos realizados en el tema 5.</p>
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%206/Ejercicios" target="_blank">Ejercicios</a></li>
+        <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%206/Portfolio%20PROG%20-%20Tema%206.md" target="_blank">Portfolio</a></li>
+        <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%206/UT6%20-%20Interfaces.pdf" target="_blank">Diapositiva del temario</a></li>
+      </ul>
+      <div class="back">
+        <a href="../index.html">Volver al inicio</a>
+      </div>
+    </div>
+
+    <div class="profile">
+      <p><strong>Jhonal Roca</strong></p>
+      <p>1º - DAW</p>
+      <p>Curso 25/26</p>
+    </div>
+  </div>
+</body>
+
+</html>
+
