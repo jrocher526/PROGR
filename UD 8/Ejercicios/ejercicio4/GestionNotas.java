@@ -25,7 +25,7 @@ public class GestionNotas {
             suma += nota; // Esto hace un unboxing automatico
         }
 
-        double media = suma / notas.size();
+        Double media = suma / notas.size(); // Double en mayusculas porque es envoltorio
 
         // Creamos lista para añadir a las notas mayor o oigual a 5
         ArrayList<Double> aprobados = new ArrayList<>();
