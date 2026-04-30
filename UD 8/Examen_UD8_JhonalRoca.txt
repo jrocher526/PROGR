@@ -1,0 +1,214 @@
+EJERCICIO 1
+
+package ejercicio1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Ejercicio1 {
+
+		// Metodo para obtener pacientes por numero
+		public static String obtenerPaciente(List<String> pacientes, Integer n) {
+	        return pacientes.get(n);
+	    }
+
+	    public static void main(String[] args) {
+	        List<String> lista = new ArrayList<>(); 
+	        lista.add("Jhonal");
+	        lista.add("Luis");
+	        lista.add("Carlos");
+	        lista.add("Manuel");
+	        lista.add("Alvin");
+
+	        System.out.println(obtenerPaciente(lista, 1));
+	        System.out.println(obtenerPaciente(lista, 0));
+	        System.out.println(obtenerPaciente(lista, 4));
+	    }
+		
+}
+
+
+
+// EJERCICIO 2
+
+package ejercicio2;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Ejercicio2 {
+	
+	// Metodo
+	public static Set<Integer> obtenerUnicos(Collection<Integer> codigos) {
+		return new HashSet<>(codigos); 
+	}
+	
+	/*
+	Eleccin:
+	HashSet es el mas eficiente para inserción y busqueda y elimina duplicados automaticamente.
+	*/
+	    public static void main(String[] args) {
+	        Collection<Integer> datos = Arrays.asList(1, 2, 2, 3, 4, 4, 5);
+
+	        Set<Integer> unicos = new HashSet<>(datos); // Elimina duplicados
+
+	        System.out.println(unicos);
+	    }
+	}
+
+
+
+// EJERCICIO 3
+
+package ejercicio3;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Ejercicio3 {
+	public static void main(String[] args) {
+	Map<String, Integer> frecuencias = new HashMap<>();
+	
+	frecuencias.put("carro", 1);
+	frecuencias.put("camion", 7);
+	frecuencias.put("moto", 4);
+	frecuencias.put("nave", 2);
+	
+	// Metemos otro con una clave que ya existe: Lo que pasaria es que el valor anterior (camion) se sobrescribe con el nuevo (moto)
+	frecuencias.put("moto", 7); 
+	
+	System.out.println(frecuencias);
+	
+	
+	}
+	
+}
+
+
+
+// EJERCICIO 4
+
+package ejercicio4;
+
+class Producto implements Comparable<Producto> {
+		
+   private int id;
+   private double precio;
+
+    public Producto(int id, double precio) {
+        this.id = id;
+        this.precio = precio;
+    }
+	
+
+    @Override
+    public int compareTo(Producto otro) {
+        return Integer.compare(this.id, otro.id); // Orden por defecto
+    }
+
+    @Override
+    public String toString() {
+        return "\n" + "Producto - id: " + id + ", precio: " + precio;
+    }
+
+    // Getters y setters
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+}
+
+
+package ejercicio4;
+
+import java.util.Comparator;
+
+public class OrdenarPorPrecio implements Comparator<Producto> {
+
+	@Override
+	// Verificamos mayor y menor y ordenamos por precio
+	public int compare(Producto p1, Producto p2) {
+		return Double.compare(p1.getPrecio(), p2.getPrecio());
+	}
+}
+
+package ejercicio4;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Ejercicio4 {
+	public static void main(String[] args) {
+		
+		List<Producto> productos = new ArrayList<>();
+		productos.add(new Producto(1, 45.99));
+		productos.add(new Producto(2, 52.67));
+		productos.add(new Producto(4, 95.12));
+		productos.add(new Producto(3, 41.39));
+		
+		// Hacemo un orden natural (por id)
+		Collections.sort(productos);
+		
+		// Ordenamos por preciuco
+		productos.sort(new OrdenarPorPrecio());
+		
+		System.out.println(productos);
+		
+	}
+}
+
+
+EJERCICIO 5
+
+package ejercicio5;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+public class Ejercicio5 {
+	public static void main(String[] args) {
+		
+		Collection<Integer> numeros = new ArrayList<>();
+		
+		numeros.add(1);
+		numeros.add(12);
+		numeros.add(3);
+		numeros.add(10);
+		numeros.add(6);
+		numeros.add(19);
+		
+		eliminarMenores(numeros, 10);
+		
+		System.out.println(numeros);
+	}
+	
+	public static void eliminarMenores(Collection<Integer> numeros, int umbral) {
+		Iterator<Integer> it = numeros.iterator();
+		
+		while (it.hasNext()) {
+			Integer num = it.next();
+		if (num < umbral) {
+			it.remove();
+		}
+			
+		}
+	}
+}
+
+
+
