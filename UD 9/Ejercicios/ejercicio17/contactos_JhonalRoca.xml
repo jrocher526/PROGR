@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<contactos>
+    <persona>
+        <nombre>Manuel Rondon</nombre>
+        <direccion>Anzoategui-Venezuela</direccion>
+        <telefono>1782739475</telefono>
+    </persona>
+    <persona>
+        <nombre>Jose Marquez</nombre>
+        <direccion>Monagas-Venezuela</direccion>
+        <telefono>73894020</telefono>
+    </persona>
+    <persona>
+        <nombre>Juan Rosado</nombre>
+        <direccion>Ubrique-España</direccion>
+        <telefono>728939281</telefono>
+    </persona>
+    <persona>
+        <nombre>Fabiana Mendonza</nombre>
+        <direccion>Caracas-Venezuela</direccion>
+        <telefono>722344343</telefono>
+    </persona>
+</contactos>
