@@ -42,7 +42,7 @@ body{
 
 .container{
     width:85%;
-    max-width:1000px;
+    max-width:1200px;
 
     background:#1a1a1a;
 
@@ -52,7 +52,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
-    gap:40px;
+    gap:50px;
 
     border:1px solid rgba(255,255,255,.08);
 
@@ -68,13 +68,13 @@ body{
 }
 
 .content h1{
-    font-size:2.5rem;
+    font-size:2.8rem;
     margin-bottom:20px;
 }
 
 .content p{
     color:#c5c5c5;
-    line-height:1.7;
+    line-height:1.8;
     margin-bottom:30px;
     max-width:650px;
 }
@@ -113,10 +113,18 @@ body{
     box-shadow:0 0 15px rgba(59,130,246,.6);
 }
 
+/* Sidebar */
+
+.sidebar{
+    width:340px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
 /* Perfil */
 
 .profile{
-    min-width:220px;
     text-align:center;
 }
 
@@ -147,25 +155,103 @@ body{
 
 .profile strong{
     color:white;
-    font-size:1.1rem;
+    font-size:1.2rem;
+}
+
+/* Tarjetas */
+
+.card{
+    background:#202020;
+
+    border:1px solid #333;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    box-shadow:0 0 10px rgba(59,130,246,.15);
+}
+
+.card h3{
+    color:#3b82f6;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#c5c5c5;
+    line-height:1.7;
+    margin-bottom:10px;
+}
+
+/* Tecnologías */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skills span{
+    background:#111827;
+
+    border:1px solid #3b82f6;
+
+    color:#60a5fa;
+
+    padding:6px 12px;
+
+    border-radius:20px;
+
+    font-size:.9rem;
+}
+
+/* GitHub */
+
+.github-btn{
+    display:block;
+
+    text-align:center;
+
+    margin-top:15px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#2563eb;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    transition:.25s;
+}
+
+.github-btn:hover{
+    box-shadow:0 0 15px rgba(59,130,246,.6);
 }
 
 /* Responsive */
 
-@media (max-width: 900px){
+@media (max-width:1000px){
 
     .container{
-        flex-direction:column-reverse;
+        flex-direction:column;
         align-items:center;
         text-align:center;
+    }
+
+    .content p{
+        max-width:100%;
     }
 
     .buttons{
         align-items:center;
     }
 
-    .content p{
-        max-width:100%;
+    .sidebar{
+        width:100%;
+        max-width:500px;
     }
 
 }
@@ -186,10 +272,7 @@ body{
         <h1>Portfolio de Programación</h1>
 
         <p>
-            Recopilación de ejercicios, proyectos y prácticas realizadas
-            durante el curso de Desarrollo de Aplicaciones Web. Aquí podrás
-            explorar las distintas unidades trabajadas y algunos de los
-            proyectos desarrollados durante el año académico.
+            Recopilación de ejercicios, proyectos y prácticas realizadas durante el curso de Desarrollo de Aplicaciones Web. Aquí podrás explorar las distintas unidades trabajadas y algunos de los proyectos desarrollados durante el año académico.
         </p>
 
         <div class="buttons">
@@ -203,19 +286,72 @@ body{
             <a href="UD 8/index.html">UD 8 - Colecciones y TAD</a>
             <a href="UD 9/index.html">UD 9 - Entrada y Salida de Información</a>
             <a href="UD 10/index.html">UD 10 - Persistencia</a>
+            <a href="UD 11/index.html">UD 11 - Interfaces Gráficas</a>
         </div>
 
     </div>
 
-    <div class="profile">
+    <div class="sidebar">
 
-        <div class="avatar">
-            <img src="FotoPerfil.png" alt="Foto de Jhonal Roca">
+        <div class="profile">
+
+            <div class="avatar">
+                <img src="FotoPerfil.png" alt="Foto de Jhonal Roca">
+            </div>
+
+            <p><strong>Jhonal Roca</strong></p>
+            <p>Desarrollador Web · DAW</p>
+            <p>Curso 2025 / 2026</p>
+
         </div>
 
-        <p><strong>Jhonal Roca</strong></p>
-        <p>Desarrollador Web · DAW</p>
-        <p>Curso 2025 / 2026</p>
+        <div class="card">
+            <h3>👤 Sobre mí</h3>
+
+            <p>
+                Estudiante de Desarrollo de Aplicaciones Web (DAW) con interés en programación, bases de datos y desarrollo de software.
+                Este portfolio recopila las actividades, proyectos y prácticas realizadas durante el curso académico.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Tecnologías</h3>
+
+            <div class="skills">
+                <span>Java</span>
+                <span>Python</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>MySQL</span>
+                <span>Git</span>
+                <span>GitHub</span>
+                <span>VS Code</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📊 Resumen del Portfolio</h3>
+
+            <p>📚 10 Unidades completadas</p>
+            <p>💻 Más de 100 ejercicios realizados</p>
+            <p>📂 10 portfolios entregados</p>
+            <p>🚀 Proyectos desarrollados durante el curso</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Repositorio GitHub</h3>
+
+            <p>
+                Accede a todo el código, ejercicios, proyectos y materiales del curso desde mi repositorio.
+            </p>
+
+            <a href="https://github.com/jrocher526/PROGR"
+               target="_blank"
+               class="github-btn">
+                Ver repositorio completo
+            </a>
+
+        </div>
 
     </div>
 
