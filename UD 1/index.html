@@ -7,113 +7,175 @@
 
 <style>
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: linear-gradient(180deg, 
-    #FFD93B 0%,
-    #1A3FAF 50%,  
-    #D72638 100%
-  );
-
-  background-attachment: fixed;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.container {
-  background: rgba(255,255,255,0.9);
-  width: 80%;
-  max-width: 900px;
-  border-radius: 20px;
-  padding: 40px 60px;
-  box-shadow: 0 10px 30px rgb(0,0,0);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
+body{
+    font-family:'Segoe UI',sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-.content{
-  width:65%;
-}
-
-h1{
-  margin-bottom:15px;
-}
-
-p{
-  color:#555;
-}
-
-ul{
-  list-style:none;
-  padding:0;
-}
-
-ul li{
-  text-decoration: none;
-  background: linear-gradient(180deg, 
-    #FFD93B 0%,
-    #1A3FAF 50%,  
-    #D72638 100%
-  );
-  background-attachment: fixed;
-  color: white;
-  display: block;
-  margin:8px 0;
-  padding:10px 15px;
-  border-radius:10px;
-  transition:0.2s;
-}
-
-ul li:hover{
-  transform:translateX(8px);
-}
-
-ul li a{
-  text-decoration:none;
-  color:rgb(255, 255, 255);
-  font-weight:500;
-}
-
-/* BOTÓN VOLVER */
-
-.back{
-  margin-top:25px;
-}
-
-.back a{
-  text-decoration:none;
-  display:inline-block;
-  padding:12px 20px;
-  border-radius:10px;
-  background: linear-gradient(180deg, 
-        #FFD93B 0%,
-        #1A3FAF 50%,  
-        #D72638 100%
-      );
-  color:white;
-  transition:0.2s;
-}
-
-.back a:hover{
-  transform:scale(1.05);
+    background:#0a0a0a;
+    color:white;
 }
 
 /* BANDERA */
 
 .flags{
-  position:fixed;
-  top:20px;
-  left:20px;
+    position:fixed;
+    top:20px;
+    left:20px;
 }
 
 .flags .flag{
-  width:70px;
+    width:60px;
+    border-radius:5px;
+    box-shadow:0 0 10px rgba(59,130,246,.5);
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+.container{
+    width:85%;
+    max-width:1000px;
+
+    background:#1a1a1a;
+
+    border-radius:20px;
+    padding:50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:40px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 0 20px rgba(59,130,246,.35),
+        0 0 50px rgba(59,130,246,.15);
+}
+
+/* CONTENIDO */
+
+.content{
+    flex:1;
+}
+
+.content h1{
+    font-size:2.3rem;
+    margin-bottom:20px;
+}
+
+.content h2{
+    margin-top:30px;
+    margin-bottom:15px;
+    color:#3b82f6;
+}
+
+.content p{
+    color:#c5c5c5;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+/* LISTA DE ENLACES */
+
+ul{
+    list-style:none;
+}
+
+ul li{
+    margin-bottom:12px;
+}
+
+ul li a{
+    display:block;
+
+    text-decoration:none;
+    color:white;
+
+    background:#252525;
+
+    padding:14px 20px;
+
+    border-radius:10px;
+
+    border:1px solid #333;
+
+    transition:.25s ease;
+}
+
+ul li a:hover{
+    background:#2563eb;
+    border-color:#3b82f6;
+
+    transform:translateX(8px);
+
+    box-shadow:0 0 15px rgba(59,130,246,.6);
+}
+
+/* PERFIL */
+
+.profile{
+    min-width:180px;
+    text-align:center;
+}
+
+.profile p{
+    margin:10px 0;
+    color:#d0d0d0;
+}
+
+.profile strong{
+    color:white;
+    font-size:1.1rem;
+}
+
+/* BOTÓN VOLVER */
+
+.back{
+    margin-top:30px;
+}
+
+.back a{
+    text-decoration:none;
+    display:inline-block;
+
+    background:#2563eb;
+    color:white;
+
+    padding:12px 22px;
+
+    border-radius:10px;
+
+    transition:.25s ease;
+}
+
+.back a:hover{
+    transform:translateY(-2px);
+
+    box-shadow:0 0 15px rgba(59,130,246,.6);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+
+    .container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profile{
+        width:100%;
+    }
+
 }
 
 </style>
@@ -122,48 +184,54 @@ ul li a{
 <body>
 
 <div class="flags">
-<img src="../banderas.jpg" class="flag">
+    <img src="../banderas.jpg" alt="Bandera" class="flag">
 </div>
 
 <div class="container">
 
-<div class="content">
+    <div class="content">
 
-<h1>Unidad 1 - Fundamentos de la Programación</h1>
+        <h1>Unidad 1 - Fundamentos de la Programación</h1>
 
-<p>
-En esta unidad encontrarás algunas de las actividades, ejercicios y proyectos realizados en el tema 1.
-</p>
+        <p>
+            En esta unidad encontrarás las actividades, ejercicios,
+            diagramas y proyectos realizados durante el estudio de los
+            fundamentos de la programación.
+        </p>
 
-<h2>Índice</h2>
+        <h2>Contenido de la Unidad</h2>
 
-<ul>
-<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Actividades" target="_blank">Actividades</a></li>
-<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Diagramas" target="_blank">Diagramas</a></li>
-<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20PSeInt" target="_blank">Ejercicios PSeInt</a></li>
-<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20Python" target="_blank">Ejercicios Python</a></li>
-<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20de%20ampliacion" target="_blank">Ejercicios Ampliación</a></li>
-<li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Proyecto%20UD1" target="_blank">Proyecto</a></li>
-<li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/Portfolio%20PROGR%20-%20Tema%201.md" target="_blank">Portfolio</a></li>
-<li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/UD%201%20-%20Introducci%C3%B3n%20a%20la%20programaci%C3%B3n.pdf" target="_blank">Diapositivas del temario</a></li>
-</ul>
+        <ul>
+            <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Actividades" target="_blank">📂 Actividades</a></li>
 
-<div class="back">
-<a href="../index.html">Volver al inicio</a>
-</div>
+            <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Diagramas" target="_blank">📊 Diagramas</a></li>
 
-</div>
+            <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20PSeInt" target="_blank">💻 Ejercicios PSeInt</a></li>
 
-<div class="profile">
+            <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20Python" target="_blank">🐍 Ejercicios Python</a></li>
 
-<p><strong>Jhonal Roca</strong></p>
-<p>1º - DAW</p>
-<p>Curso 25/26</p>
+            <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Ejercicios%20de%20ampliacion" target="_blank">🚀 Ejercicios de Ampliación</a></li>
 
-</div>
+            <li><a href="https://github.com/jrocher526/PROGR/tree/main/UD%201/Proyecto%20UD1" target="_blank">📁 Proyecto UD1</a></li>
+
+            <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/Portfolio%20PROGR%20-%20Tema%201.md" target="_blank">📖 Portfolio</a></li>
+
+            <li><a href="https://github.com/jrocher526/PROGR/blob/main/UD%201/UD%201%20-%20Introducci%C3%B3n%20a%20la%20programaci%C3%B3n.pdf" target="_blank">📚 Diapositivas del Temario</a></li>
+        </ul>
+
+        <div class="back">
+            <a href="../index.html">← Volver al inicio</a>
+        </div>
+
+    </div>
+
+    <div class="profile">
+        <p><strong>Jhonal Roca</strong></p>
+        <p>Desarrollador Web · DAW</p>
+        <p>Curso 2025 / 2026</p>
+    </div>
 
 </div>
 
 </body>
-
 </html>
