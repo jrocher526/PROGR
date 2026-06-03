@@ -424,3 +424,31 @@ Es como consultar el "manual interno" de la base de datos.
 | Crear consulta | Sentencia SQL | createQuery(“SELECT e FROM tabla e”) |
 | Modo de trabajo | SQL \- mas control | JPQL \- Mas sencillo de programar (similar a sql) |
 
+---
+
+# Establecer Conexion desde java a la base de datos
+
+Para esto se puede crear una clase en el paquete ´src´ con el siguiente contenido:
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Guardamos los datos en variables
+        String url = "jdbc:mariadb://localhost:3306/lvbp";
+        String usuario = "root";
+        String clave = "";
+
+        try {
+            // Abrimos la conexión con la base de datos
+            Connection con = DriverManager.getConnection(
+                    url,
+                    usuario,
+                    clave
+            );
+
+            System.out.println("Conexión exitosa");
+   }
+}
+
+
+
