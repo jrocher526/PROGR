@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unidad 11 - Interfaces Gráficas</title>
+<title>Unidad 11 - Interfaces Gáficas</title>
 
 <style>
 
@@ -191,6 +191,7 @@ ul li a:hover{
     <div class="content">
 
         <h1>Unidad 11 - Interfaces Gráficas</h1>
+
         <p>
             En esta unidad encontrarás las actividades y ejercicios
             relacionados con el desarrollo de interfaces gráficas en Java.
@@ -201,19 +202,14 @@ ul li a:hover{
         <ul>
 
             <li>
-                <a href="https://github.com/jrocher526/PROGR/tree/main/UD%2011/ejemplos" target="_blank">
-                    💻 Ejemplos
-                </a>
-            </li>
-            <li>
                 <a href="https://github.com/jrocher526/PROGR/tree/main/UD%2011/Ejercicios" target="_blank">
                     💻 Ejercicios
                 </a>
             </li>
 
             <li>
-                <a href="https://github.com/jrocher526/PROGR/blob/main/UD%2011/Portfolio%20PROG%20-Tema%2011.md" target="_blank">
-                    📖 Portfolio
+                <a href="https://github.com/jrocher526/PROGR/tree/main/UD%2011/ejemplos" target="_blank">
+                    💻 Ejemplos
                 </a>
             </li>
 
