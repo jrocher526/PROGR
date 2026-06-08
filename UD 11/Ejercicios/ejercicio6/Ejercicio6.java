@@ -1,64 +1,67 @@
-package Tema11.Ejercicios.ejercicio6;
+package UD11.ejercicio6;
 
 import java.awt.*;
 import java.awt.event.*;
 
 public class Ejercicio6 extends Frame implements ActionListener {
 
-    // declarar los componentes y variables a nivel de clase
-    private Button btnRestar;
-    private Button btnSumar;
-    private Label lblNumero;
+    // Componentes de la interfaz y variable contador
+    private Button botonRestar;
+    private Button botonSumar;
+    private Label etiquetaNumero;
     private int contador;
 
-    // Constructor de clase que monta la interfaz
+    // Constructor
     public Ejercicio6() {
         super("Contador Interactivo");
-        this.contador = 0;
 
-        // Crerar FlowLayout
+        contador = 0;
+
+        // Configuración de la ventana
         setLayout(new FlowLayout());
         setSize(300, 100);
 
-        // crer los componentes
-        btnRestar = new Button("-1");
-        lblNumero = new Label("0", Label.CENTER);
-        btnSumar = new Button("+1");
+        // Creación de componentes
+        botonRestar = new Button("-1");
+        etiquetaNumero = new Label("0", Label.CENTER);
+        botonSumar = new Button("+1");
 
-        // conectar botones al this
-        btnRestar.addActionListener(this);
-        btnSumar.addActionListener(this);
+        // Asociación de eventos
+        botonRestar.addActionListener(this);
+        botonSumar.addActionListener(this);
 
-        // añadir
-        add(btnRestar);
-        add(lblNumero);
-        add(btnSumar);
+        // Añadir componentes a la ventana
+        add(botonRestar);
+        add(etiquetaNumero);
+        add(botonSumar);
 
         // Evento para cerrar la ventana
         addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
         });
 
+        // Mostrar la ventana
         setVisible(true);
     }
 
-    // metodo para cundo se pulsa en el boton
+    // Se ejecuta al pulsar un botón
     @Override
-    public void actionPerformed(ActionEvent e) {
-        // devuelve el objeto que provocó el evento
-        if (e.getSource() == btnRestar) {
+    public void actionPerformed(ActionEvent evento) {
+
+        if (evento.getSource() == botonRestar) {
             contador--;
-        } else if (e.getSource() == btnSumar) {
+        } else if (evento.getSource() == botonSumar) {
             contador++;
         }
 
-        // actualizar el texto de la etiqueta transformando el int a String
-        lblNumero.setText(String.valueOf(contador));
+        // Actualizar el número mostrado
+        etiquetaNumero.setText(String.valueOf(contador));
     }
 
-    // metodo para iniciar
+    // Método principal
     public static void main(String[] args) {
         new Ejercicio6();
     }
