@@ -1,124 +1,151 @@
-package Tema11.Ejercicios.ejercicio7;
+package UD11.ejercicio7;
 
 import java.awt.*;
 import java.awt.event.*;
 
 public class Ejercicio7 extends Frame implements ActionListener {
 
-    // declarar componentes
-    private TextField txtUsuario;
-    private TextField txtPass;
-    private Button btnAceptar;
-    private Button btnLimpiar;
-    private Button btnFichero;
-    private Label lblRuta;
+    // Campos de texto
+    private TextField campoUsuario;
+    private TextField campoContrasena;
 
+    // Botones
+    private Button botonAceptar;
+    private Button botonLimpiar;
+    private Button botonSeleccionarFichero;
+
+    // Etiqueta para mostrar la ruta del fichero
+    private Label etiquetaRuta;
+
+    // Método principal
+    public static void main(String[] args) {
+        new Ejercicio7();
+    }
+
+    // Constructor
     public Ejercicio7() {
+
         super("Pantalla de Login");
 
-        // desactivar  layout automático
         setLayout(null);
         setSize(400, 320);
 
-        // crear los componentes
-        Label lblUsuario = new Label("Usuario:");
-        lblUsuario.setBounds(50, 50, 80, 30);
-        txtUsuario = new TextField();
-        txtUsuario.setBounds(140, 50, 180, 30);
+        // Usuario
+        Label etiquetaUsuario = new Label("Usuario:");
+        etiquetaUsuario.setBounds(50, 50, 80, 30);
 
-        Label lblPass = new Label("Contraseña:");
-        lblPass.setBounds(50, 100, 80, 30);
-        txtPass = new TextField();
-        txtPass.setEchoChar('*'); // Oculta el texto
-        txtPass.setBounds(140, 100, 180, 30);
+        campoUsuario = new TextField();
+        campoUsuario.setBounds(140, 50, 180, 30);
 
-        btnAceptar = new Button("Aceptar");
-        btnAceptar.setBounds(50, 160, 100, 30);
+        // Contraseña
+        Label etiquetaContrasena = new Label("Contraseña:");
+        etiquetaContrasena.setBounds(50, 100, 80, 30);
 
-        btnLimpiar = new Button("Limpiar");
-        btnLimpiar.setBounds(160, 160, 100, 30);
+        campoContrasena = new TextField();
+        campoContrasena.setEchoChar('*');
+        campoContrasena.setBounds(140, 100, 180, 30);
 
-        btnFichero = new Button("Seleccionar Fichero");
-        btnFichero.setBounds(50, 210, 150, 30);
+        // Botón aceptar
+        botonAceptar = new Button("Aceptar");
+        botonAceptar.setBounds(50, 160, 100, 30);
 
-        lblRuta = new Label("Ningún fichero seleccionado");
-        lblRuta.setBounds(50, 250, 320, 30);
+        // Botón limpiar
+        botonLimpiar = new Button("Limpiar");
+        botonLimpiar.setBounds(160, 160, 100, 30);
 
-        // registarar eventos
-        btnAceptar.addActionListener(this);
-        btnLimpiar.addActionListener(this);
-        btnFichero.addActionListener(this);
+        // Botón seleccionar fichero
+        botonSeleccionarFichero = new Button("Seleccionar Fichero");
+        botonSeleccionarFichero.setBounds(50, 210, 150, 30);
 
-        // evento pra cerrar la ventana
+        // Etiqueta de ruta
+        etiquetaRuta = new Label("Ningún fichero seleccionado");
+        etiquetaRuta.setBounds(50, 250, 320, 30);
+
+        // Registrar eventos
+        botonAceptar.addActionListener(this);
+        botonLimpiar.addActionListener(this);
+        botonSeleccionarFichero.addActionListener(this);
+
+        // Evento de cierre
         addWindowListener(new WindowAdapter() {
+            @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
         });
 
-        // añadir al frame
-        add(lblUsuario);
-        add(txtUsuario);
-        add(lblPass);
-        add(txtPass);
-        add(btnAceptar);
-        add(btnLimpiar);
-        add(btnFichero);
-        add(lblRuta);
+        // Añadir componentes
+        add(etiquetaUsuario);
+        add(campoUsuario);
+
+        add(etiquetaContrasena);
+        add(campoContrasena);
+
+        add(botonAceptar);
+        add(botonLimpiar);
+
+        add(botonSeleccionarFichero);
+        add(etiquetaRuta);
 
         setVisible(true);
     }
 
-    // eventos
     @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btnAceptar) {
-            String usuarioStr = txtUsuario.getText();
+    public void actionPerformed(ActionEvent evento) {
 
-            // Instanciamos el diálogo (Padre, Título, Modal=true)
-            Dialog dialogoBienvenida = new Dialog(this, "Mensaje", true);
-            dialogoBienvenida.setLayout(new FlowLayout());
-            dialogoBienvenida.setSize(250, 100);
+        // Botón Aceptar
+        if (evento.getSource() == botonAceptar) {
 
-            // Componentes internos del diálogo
-            Label lblMensaje = new Label("¡Bienvenido, " + usuarioStr + "!");
-            Button btnCerrarDialogo = new Button("OK");
+            String usuario = campoUsuario.getText();
 
-            // Evento para que el botón OK destruya el diálogo
-            btnCerrarDialogo.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent evt) {
-                    dialogoBienvenida.dispose();
+            Dialog dialogo = new Dialog(this, "Bienvenida", true);
+            dialogo.setLayout(new FlowLayout());
+            dialogo.setSize(250, 100);
+
+            Label mensaje =
+                    new Label("¡Bienvenido, " + usuario + "!");
+
+            Button botonOK = new Button("OK");
+
+            botonOK.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    dialogo.dispose();
                 }
             });
 
-            // Añadir y mostrar
-            dialogoBienvenida.add(lblMensaje);
-            dialogoBienvenida.add(btnCerrarDialogo);
-            // centrar con l ventana principl
-            dialogoBienvenida.setLocationRelativeTo(this);
-            dialogoBienvenida.setVisible(true);
+            dialogo.add(mensaje);
+            dialogo.add(botonOK);
+
+            dialogo.setLocationRelativeTo(this);
+            dialogo.setVisible(true);
         }
 
-        // borrar todos los campos
-        else if (e.getSource() == btnLimpiar) {
-            txtUsuario.setText("");
-            txtPass.setText("");
+        // Botón Limpiar
+        else if (evento.getSource() == botonLimpiar) {
+
+            campoUsuario.setText("");
+            campoContrasena.setText("");
         }
 
-        // fichero
-        else if (e.getSource() == btnFichero) {
-            FileDialog fd = new FileDialog(this, "Elige un archivo", FileDialog.LOAD);
-            fd.setVisible(true);
+        // Botón Seleccionar Fichero
+        else if (evento.getSource() == botonSeleccionarFichero) {
 
-            if (fd.getFile() != null) {
-                String rutaCompleta = fd.getDirectory() + fd.getFile();
-                lblRuta.setText("Archivo: " + rutaCompleta);
+            FileDialog selector =
+                    new FileDialog(this,
+                            "Selecciona un fichero",
+                            FileDialog.LOAD);
+
+            selector.setVisible(true);
+
+            if (selector.getFile() != null) {
+
+                String ruta =
+                        selector.getDirectory()
+                                + selector.getFile();
+
+                etiquetaRuta.setText("Archivo: " + ruta);
             }
         }
-    }
-
-    // iniciaar
-    public static void main(String[] args) {
-        new Ejercicio7();
     }
 }
